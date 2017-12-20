@@ -1,0 +1,20 @@
+
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
+    
+    testCompile 'org.testng:testng:6.9.10'
+}
+
+mainClassName = "org.rpnc.Application"
+
+run {
+    standardInput = System.in
+}
